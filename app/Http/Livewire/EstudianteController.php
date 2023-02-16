@@ -5,7 +5,6 @@ namespace App\Http\Livewire;
 use App\Models\Estudiante;
 use Livewire\Component;
 use Livewire\WithPagination;
-use PhpParser\Node\Expr\FuncCall;
 
 class EstudianteController extends Component
 {

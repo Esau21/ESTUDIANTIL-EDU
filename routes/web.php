@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\EstudianteController;
+use App\Http\Livewire\ProfesorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/estudiante', EstudianteController::class)->name('estudiante.index');
 Route::delete('/estudiantes/{id}', [EstudianteController::class, 'Destroy'])->name('estudiantes.destroy');
+
+Route::get('/profesor', ProfesorController::class)->name('profesor.index');
+Route::delete('/profe/{id}', [ProfesorController::class, 'Destroy'])->name('profe.destroy');
