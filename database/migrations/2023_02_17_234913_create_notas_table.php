@@ -22,11 +22,15 @@ class CreateNotasTable extends Migration
             $table->decimal('promedio');
             $table->integer('estudiante_id')->unsigned();
             $table->integer('profesor_id')->unsigned();
+            $table->integer('materia_id')->unsigned();
+            $table->integer('carrera_id')->unsigned();
             $table->timestamps();
 
 
             $table->foreign('estudiante_id')->references('id')->on('estudiantes');
             $table->foreign('profesor_id')->references('id')->on('profesors');
+            $table->foreign('materia_id')->references('id')->on('materias');
+            $table->foreign('carrera_id')->references('id')->on('carreras');
         });
     }
 

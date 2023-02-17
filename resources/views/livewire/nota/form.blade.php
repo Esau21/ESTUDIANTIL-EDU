@@ -1,6 +1,4 @@
 @include('commom.modalHead')
-
-
 <div class="container">
     <div class="card">
         <div class="card-header bg-dark">
@@ -42,7 +40,7 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
-                        <input type="number" wire:model.lazy="promedio" wire:change="calculateAverage" disabled class="form-control" >
+                        <input type="number" wire:model.lazy="promedio" disabled class="form-control" >
                         @error('promedio')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -78,5 +76,4 @@
         </div>
     </div>
 </div>
-
 @include('commom.modalFooter')

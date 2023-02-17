@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\EstudianteController;
 use App\Http\Livewire\MateriaController;
+use App\Http\Livewire\NotaControllers;
 use App\Http\Livewire\NotasController;
 use App\Http\Livewire\ProfesorController;
 use Illuminate\Support\Facades\Route;
@@ -33,3 +34,4 @@ Route::delete('/mate/{id}', [MateriaController::class, 'Destroy'])->name('materi
 
 Route::get('/nota', NotasController::class)->name('nota.index');
 Route::delete('/not/{id}', [NotasController::class, 'Destroy'])->name('nota.destroy');
+

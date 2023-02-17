@@ -5,7 +5,6 @@ namespace App\Http\Livewire;
 use App\Models\Estudiante;
 use App\Models\Nota;
 use App\Models\Profesor;
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -13,7 +12,7 @@ class NotasController extends Component
 {
     use WithPagination;
 
-    public $nota1, $nota2,   $estudiantes, $nota3, $nota4, $promedio, $estudiante_id, $profesor_id, $pageTitle, $componentName, $selected_id, $search;
+    public $nota1, $nota2,  $nota3, $nota4, $promedio, $estudiante_id, $profesor_id, $pageTitle, $componentName, $selected_id, $search;
     private $pagination = 4;
     protected $paginationTheme = 'bootstrap';
 
