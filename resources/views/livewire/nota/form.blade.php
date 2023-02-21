@@ -62,12 +62,38 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <select class="form-control" wire:model.lazy="profesor_id">
-                            <option selected>Selecciona al estudiante</option>
+                            <option selected>Selecciona al profesor</option>
                             @foreach ($profe as $e)
                                 <option value="{{ $e['id'] }}">{{ $e->nombre }}</option>
                             @endforeach
                         </select>
                         @error('profesor_id')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <select class="form-control" wire:model.lazy="materia_id">
+                            <option selected>Selecciona la materia</option>
+                            @foreach ($mate as $e)
+                                <option value="{{ $e['id'] }}">{{ $e->nombre }}</option>
+                            @endforeach
+                        </select>
+                        @error('materia_id')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <select class="form-control" wire:model.lazy="carrera_id">
+                            <option selected>Selecciona la carrera</option>
+                            @foreach ($carre as $e)
+                                <option value="{{ $e['id'] }}">{{ $e->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('carrera_id')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>

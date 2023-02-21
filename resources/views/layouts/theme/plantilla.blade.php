@@ -17,8 +17,8 @@
 </head>
 
 <body>
-
     @include('layouts.theme.nav')
+
 
     @yield('content')
 
