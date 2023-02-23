@@ -139,7 +139,7 @@ class NotasController extends Component
         $this->emit('show-modal');
     }
 
-    public function EditarNota($id) 
+    public function EditarNota($id)
     {
         $notas = Nota::find($id, ['id', 'nota1', 'nota2', 'nota3', 'nota4', 'promedio', 'estudiante_id', 'profesor_id', 'materia_id', 'carrera_id']);
         $this->selected_id = $notas->id;
@@ -202,9 +202,9 @@ class NotasController extends Component
         $this->promedio = $sumaNotas / 4;
     }
 
-    public function calcularNotaId($id) 
+    public function calcularNotaId($id)
     {
-        $sumaNotas = Nota::find($id, ['id','nota1','nota2','nota3','nota4','promedio','estudiante_id','profesor_id','materia_id','carrera_id']);
+        $sumaNotas = Nota::find($id, ['id', 'nota1', 'nota2', 'nota3', 'nota4', 'promedio', 'estudiante_id', 'profesor_id', 'materia_id', 'carrera_id']);
         $this->selected_id = $sumaNotas->id;
         $this->estudiante_id = $sumaNotas->estudiante_id;
         $this->profesor_id = $sumaNotas->profesor_id;
